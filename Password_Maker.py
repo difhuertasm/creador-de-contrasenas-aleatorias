@@ -9,7 +9,7 @@ def cerrar_ventana_inicial():
 
 # Ventana de inicio
 inicio = Tk()
-inicio.overrideredirect(True)# Elimina la barra de título.
+inicio.overrideredirect(True)
 
 # Obtiene el tamaño de la pantalla
 ancho_pantalla = inicio.winfo_screenwidth()
@@ -29,19 +29,18 @@ etiqueta_imagen = Label(inicio, image = imagen).place(x = 0, y =0)
 # Configura el tiempo de vida de la ventana 4000 milisegundos = 4s.
 inicio.after(4000, cerrar_ventana_inicial)
 
-# Ejecuta la ventana principal
 inicio.mainloop()
 
 '''_______________________Algoritmo___________________________'''
 
 estado_valido = False  # Variable de estado global
 
-def info(): #Mensaje en pestaña Info
+def info():
     messagebox.showinfo("Password Maker 2.0", "Creador de contraseñas seguras versión 1.0. Creado por el ing. D. Fernando Huertas M.")
 
 def generar_contraseña():
 
-    global contraseña, estado_valido #Para uso en otras funciones
+    global contraseña, estado_valido 
 
     letras = "ABCDFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz"
     digitos = "0123456789"
@@ -52,7 +51,7 @@ def generar_contraseña():
 
     lista_digitos = []
 
-    if int(txt0.get()) > (len(txt5.get()) + 2): # Longitud de la clave debe ser mayor que la palabra mas dos (alfanuméricos).
+    if int(txt0.get()) > (len(txt5.get()) + 2): # Longitud de la clave debe ser mayor que la palabra + dos (alfanuméricos).
         for i in range(int(txt0.get()) - (len(txt5.get()) + 2)):
             lista_digitos.append(random.choice(digitos))
         parte2 = ''.join(lista_digitos)
@@ -69,14 +68,14 @@ def generar_contraseña():
 def guardado(contraseña):
     global txt3, txt4, estado_valido 
 
-    # Ocultar mensajes anteriores
+    # Ocultar mensajes anteriores del label
     txt3.place_forget()
     txt4.place_forget()
 
     if estado_valido:
         with open('contraseña.txt', 'w') as file:
             file.write(contraseña)
-        txt3.place(x=70, y=242) #Imprimir mensaje en la parte inferior de la interfaz.
+        txt3.place(x=70, y=242) 
         txt4.place(x=60, y=260)
     else:
         with open('contraseña.txt', 'w') as file:
@@ -90,7 +89,6 @@ ventana.title("Password Maker 1.0")
 ventana.minsize(width=435, height=340)
 ventana.config(padx=35, pady=35, bg='#13171c')
 
-# Barra superior
 barra_menu = Menu(ventana)
 ventana.config(menu=barra_menu)
 
@@ -103,6 +101,7 @@ barra_menu.add_cascade(label='Guardar', menu=guardar_menu)
 guardar_menu.add_command(label='Contraseña generada', command=lambda: guardado(txt2.get()))
 
 '''________________Creación de componentes________________________'''
+
 enunciado1 = Label(text="Contraseñas seguras mediante caracteres alfanuméricos.", font=("Arial", 10), bg='#13171c', fg="#DBEBF9")
 enunciado1.place(x=10, y=0)
 
@@ -134,4 +133,5 @@ boton = Button(ventana, text='Crear contraseña', font=("Arial", 10), bg='#275fa
 boton.place(x=122, y=145, width=120, height=30)
 
 ventana.mainloop()
+
 
