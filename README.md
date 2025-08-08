@@ -1,5 +1,6 @@
 🔐 Password Maker 1.0
-Generador de contraseñas seguras con interfaz gráfica usando Python y Tkinter. Permite crear claves robustas combinando caracteres especiales, palabras personalizadas y números aleatorios.
+Password Maker 1.0 es un enerador de contraseñas seguras con interfaz gráfica usando Python y Tkinter. 
+Permite crear claves robustas combinando caracteres especiales, palabras personalizadas y números aleatorios.
 
 🧠 Características
 1. Ventana de inicio con imagen personalizada.
@@ -28,7 +29,7 @@ La contraseña se crea siguiendo esta estructura:
 3.Una cadena de números aleatorios para cumplir con la longitud total requerida.
 4.El mismo carácter especial al final.
 
-Ejemplo: $Python123$
+Ejemplo: #Python123#
 
 💾 Guardado
 Si la contraseña es válida, se guarda en un archivo llamado contraseña.txt. Si no se genera correctamente (por ejemplo, si la longitud es insuficiente), se guarda como NULL.
