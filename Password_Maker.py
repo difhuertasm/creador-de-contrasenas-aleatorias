@@ -1,6 +1,5 @@
 from tkinter import Tk, Label, Entry, Button, Menu, messagebox, Spinbox
 from tkinter import *
-import tkinter as tk
 import random
 
 '''_______________________Ventana de inicio___________________________'''
@@ -9,7 +8,7 @@ def cerrar_ventana_inicial():
     inicio.destroy()
 
 # Ventana de inicio
-inicio = tk.Tk()
+inicio = Tk()
 inicio.overrideredirect(True)# Elimina la barra de título.
 
 # Obtiene el tamaño de la pantalla
@@ -59,11 +58,11 @@ def generar_contraseña():
         parte2 = ''.join(lista_digitos)
 
         contraseña = parte0 + parte1 + parte2 + parte0
-        txt2.delete(0, tk.END)
+        txt2.delete(0, END)
         txt2.insert(0, contraseña)
         estado_valido = True # Cambia estado y continua el proceso en la siguiente función.
     else:
-        txt2.delete(0, tk.END)
+        txt2.delete(0, END)
         txt2.insert(0, "Contraseña no generada.\n")
         estado_valido = False # No cambia estado si no genera clave.
 
@@ -135,3 +134,4 @@ boton = Button(ventana, text='Crear contraseña', font=("Arial", 10), bg='#275fa
 boton.place(x=122, y=145, width=120, height=30)
 
 ventana.mainloop()
+
