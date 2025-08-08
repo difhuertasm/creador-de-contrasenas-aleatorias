@@ -33,7 +33,7 @@ inicio.mainloop()
 
 '''_______________________Algoritmo___________________________'''
 
-estado_valido = False  # Variable de estado global
+estado_valido = False 
 
 def info():
     messagebox.showinfo("Password Maker 2.0", "Creador de contraseñas seguras versión 1.0. Creado por el ing. D. Fernando Huertas M.")
@@ -46,8 +46,8 @@ def generar_contraseña():
     digitos = "0123456789"
     especiales = "!@#$%^&*_+-<>?"
 
-    parte0 = random.choice(especiales) #Escoge alfanuméricos aleatorios 
-    parte1 = txt5.get().capitalize() #Pone mayuscula a la palabra ingresada
+    parte0 = random.choice(especiales) 
+    parte1 = txt5.get().capitalize() 
 
     lista_digitos = []
 
@@ -133,5 +133,6 @@ boton = Button(ventana, text='Crear contraseña', font=("Arial", 10), bg='#275fa
 boton.place(x=122, y=145, width=120, height=30)
 
 ventana.mainloop()
+
 
 
