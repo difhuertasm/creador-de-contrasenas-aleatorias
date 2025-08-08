@@ -7,22 +7,22 @@ import random
 def cerrar_ventana_inicial():
     inicio.destroy()
 
-# Ventana de inicio
+# Ventana de inicio.
 inicio = Tk()
 inicio.overrideredirect(True)
 
-# Obtiene el tamaño de la pantalla
+# Obtiene el tamaño de la pantalla.
 ancho_pantalla = inicio.winfo_screenwidth()
 alto_pantalla = inicio.winfo_screenheight()
-#Asigna tamaño de ventana creada
+# Asigna tamaño de ventana creada.
 ancho_ventana = 385
 alto_ventana = 380
-#Ajusta posición de la ventana en el centro
+# Ajusta posición de la ventana en el centro.
 x_pos = (ancho_pantalla // 2) - (ancho_ventana // 2)
 y_pos = (alto_pantalla // 2) - (alto_ventana // 2)
-#Centra la ventana
+# Centra la ventana.
 inicio.geometry(f"{ancho_ventana}x{alto_ventana}+{x_pos}+{y_pos}")
-#Ajusta el tamaño de la ventana
+# Ajusta el tamaño de la ventana.
 inicio.minsize(width = ancho_ventana , height = alto_ventana)
 imagen = PhotoImage(file="PW_M.png")
 etiqueta_imagen = Label(inicio, image = imagen).place(x = 0, y =0)
@@ -68,7 +68,7 @@ def generar_contraseña():
 def guardado(contraseña):
     global txt3, txt4, estado_valido 
 
-    # Ocultar mensajes anteriores del label
+    # Ocultar mensajes anteriores del label.
     txt3.place_forget()
     txt4.place_forget()
 
@@ -133,6 +133,7 @@ boton = Button(ventana, text='Crear contraseña', font=("Arial", 10), bg='#275fa
 boton.place(x=122, y=145, width=120, height=30)
 
 ventana.mainloop()
+
 
 
 
