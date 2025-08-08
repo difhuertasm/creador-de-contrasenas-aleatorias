@@ -1,4 +1,5 @@
 🔐 Password Maker 1.0
+
 Password Maker 1.0 es un enerador de contraseñas seguras con interfaz gráfica usando Python y Tkinter. 
 Permite crear claves robustas combinando caracteres especiales, palabras personalizadas y números aleatorios.
 
