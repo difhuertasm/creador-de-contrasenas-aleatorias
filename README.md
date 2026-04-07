@@ -36,4 +36,4 @@ Ejemplo: #Python123#
 Si la contraseña es válida, se guarda en un archivo llamado contraseña.txt. Si no se genera correctamente (por ejemplo, si la longitud es insuficiente), se guarda como NULL.
 
 👤 Autor
-Proyecto desarrollado por el Ing. D. Fernando Huertas M. Contacto y sugerencias: difhuertasm@gmail.com
+Proyecto desarrollado por el Ing. D. Fernando Huertas M. Contacto: difhuertasm@gmail.com
